@@ -1,52 +1,51 @@
-
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink, Star, Calendar, Users } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
     {
-      title: 'Pet Blog Shop App',
-      description: 'A comprehensive full-stack blog application built with MERN stack featuring user authentication, admin panel, content management system, and responsive design. Users can create, edit, and manage blog posts with rich text editing capabilities.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'JWT', 'Mongoose'],
-      image: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
-      featured: true,
-      duration: '6 months',
-      team: 'Solo Project'
-    },
-    {
-      title: 'Helping Hands Community Platform',
-      description: 'Mobile and web application designed to connect community members for mutual assistance. Features role-based permissions, real-time messaging, event coordination, and cross-platform compatibility using React Native and React.',
-      technologies: ['React Native', 'Expo', 'React', 'Redux', 'Firebase', 'Socket.io'],
-      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
-      featured: true,
-      duration: '8 months',
-      team: '4 members'
-    },
-    {
-      title: 'Event Management Portal',
-      description: 'Comprehensive social application for event management with multiple user roles including organizers, attendees, and administrators. Features real-time notifications, payment integration, and advanced event discovery.',
-      technologies: ['React Native', 'Redux', 'REST API', 'Socket.io', 'Stripe', 'MongoDB'],
-      image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
-      featured: false,
-      duration: '5 months',
-      team: '3 members'
-    },
-    {
-      title: 'E-commerce Web Application',
-      description: 'Modern e-commerce platform with advanced shopping cart functionality, secure payment integration via Stripe, comprehensive admin dashboard, inventory management, and customer analytics.',
-      technologies: ['React', 'TypeScript', 'Stripe', 'Node.js', 'PostgreSQL', 'Redis'],
+      title: 'E-commerce Website',
+      description: 'A full-featured e-commerce platform built with React and Node.js, featuring user authentication, product catalog, shopping cart functionality, payment integration, and admin dashboard for inventory management.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API', 'JWT'],
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
       github: '#',
       demo: '#',
+      featured: true,
+      duration: '4 months',
+      team: 'Solo Project'
+    },
+    {
+      title: 'Task Management System',
+      description: 'A comprehensive task management application with real-time collaboration features, project tracking, team assignment capabilities, and progress monitoring. Built with modern React patterns and responsive design.',
+      technologies: ['React', 'Redux', 'Node.js', 'Socket.io', 'PostgreSQL', 'Material-UI'],
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      github: '#',
+      demo: '#',
+      featured: true,
+      duration: '3 months',
+      team: 'Solo Project'
+    },
+    {
+      title: 'Weather Application',
+      description: 'An intuitive weather application providing real-time weather data, forecasts, and location-based services. Features responsive design, interactive maps, and weather alerts with clean user interface.',
+      technologies: ['React', 'JavaScript', 'OpenWeather API', 'CSS3', 'Geolocation API'],
+      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
+      github: '#',
+      demo: '#',
       featured: false,
-      duration: '7 months',
-      team: '5 members'
+      duration: '2 months',
+      team: 'Solo Project'
+    },
+    {
+      title: 'Blog Platform',
+      description: 'A modern blogging platform with content management system, user authentication, rich text editing, comment system, and social sharing features. Includes admin panel for content moderation.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Rich Text Editor', 'Bootstrap'],
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
+      github: '#',
+      demo: '#',
+      featured: false,
+      duration: '3 months',
+      team: 'Solo Project'
     }
   ];
 
@@ -67,7 +66,7 @@ export const Projects = () => {
             </h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               A collection of full-stack applications demonstrating expertise in modern web technologies, 
-              mobile development, and comprehensive software engineering practices.
+              responsive design, and comprehensive software engineering practices.
             </p>
           </div>
 
