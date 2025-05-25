@@ -14,14 +14,14 @@ export const About = () => {
       technologies: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'RESTful APIs', 'GraphQL']
     },
     {
-      category: 'Mobile',
+      category: 'Development',
       icon: <Settings className="h-6 w-6" />,
-      technologies: ['React Native', 'Expo', 'Android', 'iOS Development', 'Cross-platform']
+      technologies: ['Full-Stack Development', 'Web Applications', 'API Development', 'Database Design']
     },
     {
       category: 'Tools & Others',
       icon: <Users className="h-6 w-6" />,
-      technologies: ['Git', 'Docker', 'AWS', 'Firebase', 'Jest', 'Agile/Scrum', 'CI/CD']
+      technologies: ['Git', 'Docker', 'AWS', 'Jest', 'Agile/Scrum', 'CI/CD']
     }
   ];
 
@@ -34,7 +34,7 @@ export const About = () => {
               About Me
             </h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              I'm a passionate Full-Stack Developer with expertise in modern web and mobile technologies. 
+              I'm a passionate Full-Stack Developer with expertise in modern web technologies. 
               I love creating efficient, scalable solutions and have experience working with cross-functional 
               teams to deliver high-quality applications.
             </p>

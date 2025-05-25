@@ -27,8 +27,8 @@ export const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email',
-      content: 'mohddanish@example.com',
-      link: 'mailto:mohddanish@example.com'
+      content: 'danissh419@gmail.com',
+      link: 'mailto:danissh419@gmail.com'
     },
     {
       icon: <MapPin className="h-6 w-6" />,
@@ -39,14 +39,14 @@ export const Contact = () => {
     {
       icon: <Github className="h-6 w-6" />,
       title: 'GitHub',
-      content: 'github.com/mohddanish',
-      link: 'https://github.com/mohddanish'
+      content: 'github.com/danishmalik419',
+      link: 'https://github.com/danishmalik419'
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       title: 'LinkedIn',
-      content: 'linkedin.com/in/mohddanish',
-      link: 'https://linkedin.com/in/mohddanish'
+      content: 'linkedin.com/in/mohd-danish-b233ba277',
+      link: 'https://www.linkedin.com/in/mohd-danish-b233ba277/'
     }
   ];
 

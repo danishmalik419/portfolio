@@ -48,15 +48,29 @@ export const Header = ({ activeSection }: HeaderProps) => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
-              <Mail className="h-5 w-5" />
-            </Button>
+            <a 
+              href="https://github.com/danishmalik419" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
+                <Github className="h-5 w-5" />
+              </Button>
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/mohd-danish-b233ba277/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+            <a href="mailto:danissh419@gmail.com">
+              <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
+                <Mail className="h-5 w-5" />
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,15 +100,29 @@ export const Header = ({ activeSection }: HeaderProps) => {
                 </button>
               ))}
               <div className="flex space-x-4 pt-4">
-                <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
-                  <Github className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
-                  <Linkedin className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
-                  <Mail className="h-5 w-5" />
-                </Button>
+                <a 
+                  href="https://github.com/danishmalik419" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
+                    <Github className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/mohd-danish-b233ba277/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
+                    <Linkedin className="h-5 w-5" />
+                  </Button>
+                </a>
+                <a href="mailto:danissh419@gmail.com">
+                  <Button variant="ghost" size="icon" className="text-slate-300 hover:text-blue-400">
+                    <Mail className="h-5 w-5" />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

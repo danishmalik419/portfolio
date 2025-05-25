@@ -31,7 +31,7 @@ export const Footer = () => {
               <p className="text-slate-400 mb-6 text-lg">Let's connect and build something amazing together</p>
               <div className="flex justify-center space-x-6">
                 <a 
-                  href="https://github.com/mohddanish" 
+                  href="https://github.com/danishmalik419" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group bg-slate-800/50 border border-slate-700/50 p-4 rounded-xl text-slate-400 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 backdrop-blur-sm"
@@ -39,7 +39,7 @@ export const Footer = () => {
                   <Github className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/mohddanish" 
+                  href="https://www.linkedin.com/in/mohd-danish-b233ba277/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group bg-slate-800/50 border border-slate-700/50 p-4 rounded-xl text-slate-400 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 backdrop-blur-sm"
@@ -47,7 +47,7 @@ export const Footer = () => {
                   <Linkedin className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a 
-                  href="mailto:mohddanish@example.com"
+                  href="mailto:danissh419@gmail.com"
                   className="group bg-slate-800/50 border border-slate-700/50 p-4 rounded-xl text-slate-400 hover:text-white hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 backdrop-blur-sm"
                 >
                   <Mail className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />

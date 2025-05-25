@@ -1,11 +1,23 @@
+
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink, Star, Calendar, Users } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce Website',
-      description: 'A full-featured e-commerce platform built with React and Node.js, featuring user authentication, product catalog, shopping cart functionality, payment integration, and admin dashboard for inventory management.',
+      title: 'AI Chatbot Platform',
+      description: 'Advanced AI-powered chatbot platform with intelligent conversation capabilities, natural language processing, and seamless user interactions. Features include contextual understanding, multi-language support, and adaptive learning capabilities.',
+      technologies: ['React', 'Node.js', 'OpenAI API', 'MongoDB', 'Socket.io', 'Express.js'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
+      github: '#',
+      demo: '#',
+      featured: true,
+      duration: '3 months',
+      team: 'Solo Project'
+    },
+    {
+      title: 'E-commerce Platform - Chart Store',
+      description: 'Comprehensive e-commerce solution specializing in chart and data visualization products. Features include product catalog, shopping cart, secure payment processing, user authentication, and order management system.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API', 'JWT'],
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
       github: '#',
@@ -15,21 +27,21 @@ export const Projects = () => {
       team: 'Solo Project'
     },
     {
-      title: 'Task Management System',
-      description: 'A comprehensive task management application with real-time collaboration features, project tracking, team assignment capabilities, and progress monitoring. Built with modern React patterns and responsive design.',
-      technologies: ['React', 'Redux', 'Node.js', 'Socket.io', 'PostgreSQL', 'Material-UI'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      title: 'Blog Application - WC Blog',
+      description: 'Modern blogging platform with rich content management system, user authentication, comment system, and social sharing features. Includes admin panel for content moderation and user management.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Rich Text Editor', 'Material-UI'],
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
       github: '#',
       demo: '#',
-      featured: true,
+      featured: false,
       duration: '3 months',
       team: 'Solo Project'
     },
     {
-      title: 'Weather Application',
-      description: 'An intuitive weather application providing real-time weather data, forecasts, and location-based services. Features responsive design, interactive maps, and weather alerts with clean user interface.',
-      technologies: ['React', 'JavaScript', 'OpenWeather API', 'CSS3', 'Geolocation API'],
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
+      title: 'Movies Entertainment',
+      description: 'Entertainment platform for movie discovery and information. Features include movie search, detailed information display, user ratings, watchlist management, and recommendation system based on user preferences.',
+      technologies: ['React', 'JavaScript', 'TMDb API', 'CSS3', 'Local Storage'],
+      image: 'https://images.unsplash.com/photo-1489599735734-79b4ba5cd976?w=600&h=400&fit=crop',
       github: '#',
       demo: '#',
       featured: false,
@@ -37,15 +49,15 @@ export const Projects = () => {
       team: 'Solo Project'
     },
     {
-      title: 'Blog Platform',
-      description: 'A modern blogging platform with content management system, user authentication, rich text editing, comment system, and social sharing features. Includes admin panel for content moderation.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Rich Text Editor', 'Bootstrap'],
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
+      title: 'Helping Hands Community',
+      description: 'Community platform designed to connect volunteers with local organizations and charitable causes. Features include event management, volunteer registration, impact tracking, and community engagement tools.',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Express.js', 'Bootstrap', 'Socket.io'],
+      image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop',
       github: '#',
       demo: '#',
       featured: false,
-      duration: '3 months',
-      team: 'Solo Project'
+      duration: '4 months',
+      team: 'Team Project'
     }
   ];
 
@@ -66,7 +78,7 @@ export const Projects = () => {
             </h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               A collection of full-stack applications demonstrating expertise in modern web technologies, 
-              responsive design, and comprehensive software engineering practices.
+              AI integration, and comprehensive software engineering practices.
             </p>
           </div>
 
@@ -131,7 +143,7 @@ export const Projects = () => {
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {projects.filter(project => !project.featured).map((project, index) => (
               <div key={index} className="group bg-slate-900/60 border border-slate-700/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5">
                 <div className="relative h-48 overflow-hidden">
