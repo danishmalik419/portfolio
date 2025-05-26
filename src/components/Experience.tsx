@@ -1,54 +1,65 @@
-
 import { Calendar, MapPin } from 'lucide-react';
 
 export const Experience = () => {
   const experiences = [
     {
-      title: 'Full Stack Developer Intern',
-      company: 'Helping Hands Community (Platforms)',
+      title: 'EDMS - Electronic Document Management System',
+      company: 'Full Stack Developer',
       location: 'Remote',
-      period: '04/2024 - 10/2024',
+      period: '3 months',
       description: [
-        'Built mobile apps for iOS and Android using React Native and expo ecosystem',
-        'Developed a responsive web app for easy browsing and navigation',
-        'Used state management in React Native for better state management',
-        'Implemented a role permission system for admin and user access control'
+        'Built a comprehensive document management system with versioning and secure storage',
+        'Implemented advanced search capabilities and workflow automation',
+        'Developed role-based access control for enhanced security',
+        'Integrated AWS S3 for efficient document storage and retrieval'
       ]
     },
     {
-      title: 'React Native Developer Intern',
-      company: 'Eventing Portal - Chief Guest',
+      title: 'E-commerce Platform - Ckart Store',
+      company: 'Full Stack Developer',
       location: 'Remote',
-      period: '05/2024 - 06/2024',
+      period: '4 months',
       description: [
-        'Contributed to a consumer social application offering 3 different',
-        'Used skills of state management (Redux), state management library and API integration',
-        'Implemented UI/UX principles in mobile app development with React Native',
-        'Worked with cross-functional teams to deliver features on time'
+        'Developed a complete e-commerce solution for chart and data visualization products',
+        'Implemented secure payment processing with Stripe API integration',
+        'Created user authentication and order management system',
+        'Built product catalog and shopping cart functionality'
       ]
     },
     {
-      title: 'Full Stack Developer Intern',
-      company: 'Arshiasat Solutions - Ahmedabad',
-      location: 'Ahmedabad',
-      period: '03/2024 - 04/2024',
+      title: 'Blog Application - WC Blog',
+      company: 'Full Stack Developer',
+      location: 'Remote',
+      period: '3 months',
       description: [
-        'Implemented MERN stack for end-to-end web development',
-        'Designed and developed user interfaces using ReactJS and JavaScript',
-        'Created responsive web applications with modern UI/UX practices',
-        'Collaborated with the team to implement RESTful APIs and database integration'
+        'Created a modern blogging platform with rich content management',
+        'Implemented user authentication and comment system',
+        'Developed admin panel for content moderation',
+        'Integrated social sharing features and user management'
       ]
     },
     {
-      title: 'Blog Application - Pet Blog Shop App',
-      company: 'Personal Project',
+      title: 'Movies Entertainment Platform',
+      company: 'Frontend Developer',
       location: 'Remote',
-      period: '04/2024 - 05/2024',
+      period: '2 months',
       description: [
-        'Built a full-stack blog application using MERN stack',
-        'Implemented user authentication and authorization',
-        'Created admin panel for content management',
-        'Deployed the application with responsive design'
+        'Built an entertainment platform for movie discovery and information',
+        'Integrated TMDb API for movie data and recommendations',
+        'Implemented user ratings and watchlist management',
+        'Created responsive design with modern UI/UX practices'
+      ]
+    },
+    {
+      title: 'Helping Hands Community',
+      company: 'Full Stack Developer',
+      location: 'Remote',
+      period: '4 months',
+      description: [
+        'Developed a community platform connecting volunteers with organizations',
+        'Implemented event management and volunteer registration system',
+        'Created impact tracking and community engagement tools',
+        'Integrated real-time features using Socket.io'
       ]
     }
   ];

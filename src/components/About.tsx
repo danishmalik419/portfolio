@@ -1,4 +1,3 @@
-
 import { Code, Database, Users, Settings } from 'lucide-react';
 
 export const About = () => {
@@ -11,17 +10,12 @@ export const About = () => {
     {
       category: 'Backend',
       icon: <Database className="h-6 w-6" />,
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'RESTful APIs', 'GraphQL']
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'PostgreSQL']
     },
     {
       category: 'Development',
       icon: <Settings className="h-6 w-6" />,
-      technologies: ['Full-Stack Development', 'Web Applications', 'API Development', 'Database Design']
-    },
-    {
-      category: 'Tools & Others',
-      icon: <Users className="h-6 w-6" />,
-      technologies: ['Git', 'Docker', 'AWS', 'Jest', 'Agile/Scrum', 'CI/CD']
+      technologies: ['Full-Stack Development', 'Web Applications', 'API Development']
     }
   ];
 
@@ -40,7 +34,7 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-4xl mx-auto">
             {skills.map((skill, index) => (
               <div key={index} className="bg-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 group">
                 <div className="flex items-center mb-4">

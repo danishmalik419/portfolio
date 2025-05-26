@@ -1,27 +1,24 @@
-
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink, Star, Calendar, Users } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
     {
-      title: 'AI Chatbot Platform',
-      description: 'Advanced AI-powered chatbot platform with intelligent conversation capabilities, natural language processing, and seamless user interactions. Features include contextual understanding, multi-language support, and adaptive learning capabilities.',
-      technologies: ['React', 'Node.js', 'OpenAI API', 'MongoDB', 'Socket.io', 'Express.js'],
+      title: 'EDMS - Electronic Document Management System',
+      description: 'A comprehensive document management system designed for efficient handling of electronic documents. Features include document versioning, secure storage, advanced search capabilities, workflow automation, and role-based access control. Built with modern technologies to ensure scalability and security.',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'AWS S3', 'JWT'],
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
+      demo: 'https://edms.avtechfin.co.in/',
       featured: true,
       duration: '3 months',
       team: 'Solo Project'
     },
     {
-      title: 'E-commerce Platform - Chart Store',
+      title: 'E-commerce Platform - Ckart Store',
       description: 'Comprehensive e-commerce solution specializing in chart and data visualization products. Features include product catalog, shopping cart, secure payment processing, user authentication, and order management system.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Stripe API', 'JWT'],
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
+      demo: 'https://ckart.store/',
       featured: true,
       duration: '4 months',
       team: 'Solo Project'
@@ -31,8 +28,7 @@ export const Projects = () => {
       description: 'Modern blogging platform with rich content management system, user authentication, comment system, and social sharing features. Includes admin panel for content moderation and user management.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Rich Text Editor', 'Material-UI'],
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
+      demo: 'https://wcblog.in/',
       featured: false,
       duration: '3 months',
       team: 'Solo Project'
@@ -41,9 +37,8 @@ export const Projects = () => {
       title: 'Movies Entertainment',
       description: 'Entertainment platform for movie discovery and information. Features include movie search, detailed information display, user ratings, watchlist management, and recommendation system based on user preferences.',
       technologies: ['React', 'JavaScript', 'TMDb API', 'CSS3', 'Local Storage'],
-      image: 'https://images.unsplash.com/photo-1489599735734-79b4ba5cd976?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
+      image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&h=400&fit=crop',
+      demo: 'https://entertainment-app-flame.vercel.app/',
       featured: false,
       duration: '2 months',
       team: 'Solo Project'
@@ -53,8 +48,7 @@ export const Projects = () => {
       description: 'Community platform designed to connect volunteers with local organizations and charitable causes. Features include event management, volunteer registration, impact tracking, and community engagement tools.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Express.js', 'Bootstrap', 'Socket.io'],
       image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop',
-      github: '#',
-      demo: '#',
+      demo: 'https://hhc4u.org/',
       featured: false,
       duration: '4 months',
       team: 'Team Project'
@@ -129,11 +123,11 @@ export const Projects = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:border-blue-500/50 flex-1">
-                      <Github className="h-5 w-5 mr-2" />
-                      View Code
-                    </Button>
-                    <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-1">
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-1"
+                      onClick={() => window.open(project.demo, '_blank')}
+                    >
                       <ExternalLink className="h-5 w-5 mr-2" />
                       Live Demo
                     </Button>
@@ -188,11 +182,11 @@ export const Projects = () => {
                   </div>
 
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="border-slate-600 text-slate-300 hover:bg-slate-800 flex-1">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-1">
+                    <Button 
+                      size="sm" 
+                      className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-1"
+                      onClick={() => window.open(project.demo, '_blank')}
+                    >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Demo
                     </Button>
@@ -205,7 +199,7 @@ export const Projects = () => {
           <div className="text-center mt-16">
             <div className="inline-flex flex-col items-center">
               <p className="text-slate-400 mb-6 text-lg">Want to see more of my work?</p>
-              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:border-blue-500/50 px-8 py-3">
+              <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:border-blue-500/50 px-8 py-3" onClick={() => window.open('https://github.com/danishmalik419?tab=repositories', '_blank')}>
                 <Github className="h-5 w-5 mr-2" />
                 View All Projects on GitHub
               </Button>

@@ -44,7 +44,7 @@ export const Hero = () => {
             
             <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed">
               Passionate about creating exceptional digital experiences with modern technologies.
-              Specializing in <span className="text-blue-400 font-semibold">React</span>, <span className="text-green-400 font-semibold">Node.js</span>, and <span className="text-purple-400 font-semibold">mobile development</span>.
+              Specializing in <span className="text-blue-400 font-semibold">React</span>, <span className="text-green-400 font-semibold">Node.js</span>
             </p>
           </div>
 
@@ -77,11 +77,8 @@ export const Hero = () => {
                 { name: 'React', color: 'from-blue-400 to-cyan-400' },
                 { name: 'Node.js', color: 'from-green-400 to-emerald-400' },
                 { name: 'TypeScript', color: 'from-blue-400 to-blue-600' },
-                { name: 'React Native', color: 'from-purple-400 to-pink-400' },
                 { name: 'MongoDB', color: 'from-green-500 to-green-600' },
-                { name: 'Express.js', color: 'from-gray-400 to-gray-600' },
-                { name: 'Redux', color: 'from-purple-500 to-purple-600' },
-                { name: 'Firebase', color: 'from-yellow-400 to-orange-400' }
+                { name: 'Express.js', color: 'from-gray-400 to-gray-600' }
               ].map((tech, index) => (
                 <span 
                   key={tech.name}
