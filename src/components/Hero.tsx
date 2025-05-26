@@ -7,6 +7,16 @@ export const Hero = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const downloadResume = () => {
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You'll need to add your resume PDF to the public folder
+    link.download = 'Mohd_Danish_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated background */}
@@ -62,7 +72,7 @@ export const Hero = () => {
               variant="outline" 
               size="lg" 
               className="border-slate-600 text-slate-300 hover:bg-slate-800/80 hover:border-blue-500/50 px-10 py-4 text-lg font-semibold backdrop-blur-sm transition-all duration-300"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={downloadResume}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Resume

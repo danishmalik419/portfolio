@@ -84,8 +84,8 @@ export const Contact = () => {
                         <a 
                           href={info.link} 
                           className="text-slate-400 hover:text-blue-400 transition-colors duration-300"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target={info.title === 'Email' ? '_self' : '_blank'}
+                          rel={info.title === 'Email' ? '' : 'noopener noreferrer'}
                         >
                           {info.content}
                         </a>
