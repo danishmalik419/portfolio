@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Download, MapPin } from 'lucide-react';
 
@@ -14,31 +13,46 @@ export const Hero = () => {
       const response = await fetch(imageUrl);
       const blob = await response.blob();
       
-      // Create a canvas to convert image to PDF-like format
+      // Create image element
       const img = new Image();
       img.onload = () => {
+        // Create canvas
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
         
-        // Set canvas size to match image
-        canvas.width = img.width;
-        canvas.height = img.height;
+        // Set canvas size (A4 aspect ratio)
+        const maxWidth = 595; // A4 width in points
+        const maxHeight = 842; // A4 height in points
         
-        // Draw image on canvas
-        ctx?.drawImage(img, 0, 0);
+        // Calculate scaling to fit image in A4
+        const scale = Math.min(maxWidth / img.width, maxHeight / img.height);
+        canvas.width = img.width * scale;
+        canvas.height = img.height * scale;
         
-        // Convert canvas to blob and download
-        canvas.toBlob((canvasBlob) => {
-          if (canvasBlob) {
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(canvasBlob);
-            link.download = 'Mohd_Danish_Resume.png';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(link.href);
-          }
-        }, 'image/png');
+        // Fill white background
+        if (ctx) {
+          ctx.fillStyle = 'white';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          
+          // Draw image on canvas
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          
+          // Convert canvas to image data
+          const imgData = canvas.toDataURL('image/jpeg', 0.95);
+          
+          // Create simple PDF structure
+          const pdfData = createSimplePDF(imgData, canvas.width, canvas.height);
+          
+          // Create blob and download
+          const pdfBlob = new Blob([pdfData], { type: 'application/pdf' });
+          const link = document.createElement('a');
+          link.href = URL.createObjectURL(pdfBlob);
+          link.download = 'Mohd_Danish_Resume.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(link.href);
+        }
       };
       
       img.src = URL.createObjectURL(blob);
@@ -52,6 +66,86 @@ export const Hero = () => {
       link.click();
       document.body.removeChild(link);
     }
+  };
+
+  // Simple PDF creation function
+  const createSimplePDF = (imageData: string, width: number, height: number) => {
+    const pdfContent = `%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 ${width} ${height}]
+/Contents 4 0 R
+/Resources <<
+/XObject <<
+/Im1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 44
+>>
+stream
+q
+${width} 0 0 ${height} 0 0 cm
+/Im1 Do
+Q
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /XObject
+/Subtype /Image
+/Width ${Math.floor(width)}
+/Height ${Math.floor(height)}
+/ColorSpace /DeviceRGB
+/BitsPerComponent 8
+/Filter /DCTDecode
+/Length ${imageData.length}
+>>
+stream
+${imageData.split(',')[1]}
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000079 00000 n 
+0000000136 00000 n 
+0000000301 00000 n 
+0000000395 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+${600 + imageData.length}
+%%EOF`;
+    
+    return pdfContent;
   };
 
   return (
