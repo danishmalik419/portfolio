@@ -7,14 +7,51 @@ export const Hero = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const downloadResume = () => {
-    // Create a temporary link element to trigger download
-    const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your resume PDF to the public folder
-    link.download = 'Mohd_Danish_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const downloadResume = async () => {
+    try {
+      // Fetch the image
+      const imageUrl = '/lovable-uploads/3818e745-c456-4096-b348-224b0630d4cd.png';
+      const response = await fetch(imageUrl);
+      const blob = await response.blob();
+      
+      // Create a canvas to convert image to PDF-like format
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Set canvas size to match image
+        canvas.width = img.width;
+        canvas.height = img.height;
+        
+        // Draw image on canvas
+        ctx?.drawImage(img, 0, 0);
+        
+        // Convert canvas to blob and download
+        canvas.toBlob((canvasBlob) => {
+          if (canvasBlob) {
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(canvasBlob);
+            link.download = 'Mohd_Danish_Resume.png';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+          }
+        }, 'image/png');
+      };
+      
+      img.src = URL.createObjectURL(blob);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      // Fallback: direct image download
+      const link = document.createElement('a');
+      link.href = '/lovable-uploads/3818e745-c456-4096-b348-224b0630d4cd.png';
+      link.download = 'Mohd_Danish_Resume.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   return (
